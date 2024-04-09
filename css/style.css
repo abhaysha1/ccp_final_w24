@@ -181,15 +181,23 @@ img {
     height: auto;
 }
 
-.travel-gallery img{
-    width: 100%;
-}
+
 
 .travel-gallery {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column width */
+    gap: 10px; /* Adjust gap between grid items */
+    max-width: 100%; /* Ensure the grid doesn't exceed the screen width */
     padding: 0;
-    margin-right: 0;
-    grid-template-columns: repeat(5, 1fr);
+    margin: 0;
+}
+
+.travel-gallery img {
+    width: 100%;
+    height: auto;
+    border: 5px solid gold;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 @media screen and (min-width: 900px){
